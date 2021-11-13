@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Simple Maze Game</string>
     <string name="title_activity_main">Maze game</string>
-    <string name="descripcion">Podras escapar?</string>
-    <string name="boton_jugar">Jugar</string>
+    <string name="boton_jugar">Play</string>
+    <string name="game_name">Name</string>
+    <string name="select_game">Please select game!</string>
+    <string name="or_create_game">OR create a new game</string>
 </resources>

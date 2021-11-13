@@ -1,41 +1,41 @@
 {
   "project_info": {
-    "project_number": "90602589380",
-    "project_id": "simple-android-maze",
-    "storage_bucket": "simple-android-maze.appspot.com"
+    "project_number": "622355178119",
+    "project_id": "simple-android-maze-ca359",
+    "storage_bucket": "simple-android-maze-ca359.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:90602589380:android:1039432ea9c6bd93b3cd91",
+        "mobilesdk_app_id": "1:622355178119:android:db7261d5181219086dce22",
         "android_client_info": {
           "package_name": "ar.edu.ips.aus.seminario2.sampleproject"
         }
       },
       "oauth_client": [
         {
-          "client_id": "90602589380-6gd29e1fjgd89vltlu57bhls9lgkpu44.apps.googleusercontent.com",
+          "client_id": "622355178119-jhq1h3sh63d4ck45ps3bmhtji8k0bcoq.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "ar.edu.ips.aus.seminario2.sampleproject",
-            "certificate_hash": "92ea3294e9493aaee7e690495e743df9e1461643"
+            "certificate_hash": "e61974b707a5ba23fe9b66cdbd3e1cf8c5378efd"
           }
         },
         {
-          "client_id": "90602589380-r4qk2osdtula8ih7aslp0jqdpuv5kfv7.apps.googleusercontent.com",
+          "client_id": "622355178119-fme4iqqllal8aemt4hd70eeq8sdia1lo.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAiXorOrU3-SwfpHFTnpxAVlsEs32gYKvo"
+          "current_key": "AIzaSyBa0YX7Qa-UiabwU4CGQ5XjpS37aWdolIU"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "90602589380-r4qk2osdtula8ih7aslp0jqdpuv5kfv7.apps.googleusercontent.com",
+              "client_id": "622355178119-fme4iqqllal8aemt4hd70eeq8sdia1lo.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

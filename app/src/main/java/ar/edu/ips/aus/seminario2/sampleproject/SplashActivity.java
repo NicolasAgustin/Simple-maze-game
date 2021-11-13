@@ -22,7 +22,7 @@ public class SplashActivity extends AppCompatActivity {
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SplashActivity.this, MazeBoardActivity.class);
+                Intent intent = new Intent(SplashActivity.this, GameSelectionActivity.class);
                 startActivity(intent);
             }
         });

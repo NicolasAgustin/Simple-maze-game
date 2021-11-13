@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Simple Maze Game</string>
+    <string name="title_activity_main">Maze game</string>
+    <string name="boton_jugar">Jugar</string>
+    <string name="game_name">Nombre</string>
+    <string name="select_game">Por favor selecciona un juego!</string>
+    <string name="or_create_game">O crea uno nuevo</string>
+</resources>
