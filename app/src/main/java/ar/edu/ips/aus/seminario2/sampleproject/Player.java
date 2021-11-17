@@ -6,6 +6,8 @@ import static ar.edu.ips.aus.seminario2.sampleproject.MazeBoard.Direction.NORTH;
 import static ar.edu.ips.aus.seminario2.sampleproject.MazeBoard.Direction.SOUTH;
 import static ar.edu.ips.aus.seminario2.sampleproject.MazeBoard.Direction.WEST;
 
+import android.util.Log;
+
 public class Player {
     private String ID;
     private double x;
@@ -13,6 +15,7 @@ public class Player {
     private double xVel = 0.0;
     private double yVel = 0.0;
     private final static double VEL_FACTOR = 0.04;
+    private boolean win = false;
 
     public Player(String id, double x, double y) {
         this.ID = id;
@@ -63,6 +66,8 @@ public class Player {
         this.yVel = yVel;
     }
 
+    public boolean getWin() { return this.win; }
+
     public boolean move(MazeBoard board) {
         boolean moved = false;
         int pieceXPos = (int) getX();
@@ -70,6 +75,14 @@ public class Player {
 
         MazeBoard.Direction dir = NONE;
         dir = getDirection();
+
+        Log.i("DEBUG", "Y:"+ getY() + " " + "X:"+ getX());
+
+        if ((int)getX() == 8 && (int)getY() == 8){
+            Log.i("WIN", "You win!!!");
+            this.win = true;
+            return false;
+        }
 
         switch(dir) {
             case NORTH:

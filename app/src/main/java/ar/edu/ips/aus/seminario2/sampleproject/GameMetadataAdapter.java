@@ -40,10 +40,7 @@ public class GameMetadataAdapter extends RecyclerView.Adapter<GameMetadataAdapte
                 Log.d("Game: ", snapshot.getKey());
                 data.setId(snapshot.getKey());
                 try {
-                    //String statusKey = snapshot.child("status").getValue().toString();
-                    //if (statusKey.equals("NEW")){
-                        gameList.add(data);
-                    //}
+                    gameList.add(data);
                 } catch (NullPointerException e) {
                     e.printStackTrace();
                 }

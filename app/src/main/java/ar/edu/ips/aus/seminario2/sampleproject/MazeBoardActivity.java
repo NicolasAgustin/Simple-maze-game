@@ -2,8 +2,11 @@ package ar.edu.ips.aus.seminario2.sampleproject;
 
 import android.content.Intent;
 import android.graphics.PixelFormat;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.LayerDrawable;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.view.Gravity;
 import android.view.View;
@@ -19,7 +22,7 @@ public class MazeBoardActivity extends AppCompatActivity
 
     private static final String TAG = MazeBoardActivity.class.getSimpleName();
 
-    private Button buttonUp, buttonDown, buttonLeft, buttonRight;
+    private Button buttonUp, buttonDown, buttonLeft, buttonRight, buttonPause;
 
     ImageView[] imageViews = null;
 
@@ -34,11 +37,13 @@ public class MazeBoardActivity extends AppCompatActivity
         buttonDown = findViewById(R.id.buttonDown);
         buttonLeft = findViewById(R.id.buttonLeft);
         buttonRight = findViewById(R.id.buttonRight);
+        buttonPause = (Button)findViewById(R.id.pause);
 
         buttonUp.setOnClickListener(this);
         buttonDown.setOnClickListener(this);
         buttonLeft.setOnClickListener(this);
         buttonRight.setOnClickListener(this);
+        buttonPause.setOnClickListener(this);
 
         mazeView = (GameView)findViewById(R.id.gameView);
         mazeView.getHolder().setFormat(PixelFormat.TRANSLUCENT);
@@ -70,22 +75,25 @@ public class MazeBoardActivity extends AppCompatActivity
 
             for (int j=0; j<width; j++){
                 BoardPiece piece = board.getPiece(j, i);
-
-                resId = lookupResource(piece);
-
                 ImageView imageView = new ImageView(this);
-                imageView.setBackgroundResource(resId);
                 TableRow.LayoutParams imageViewParams = new TableRow.LayoutParams();
                 imageViewParams.width = ViewGroup.LayoutParams.MATCH_PARENT;
                 imageViewParams.height = ViewGroup.LayoutParams.MATCH_PARENT;
                 imageViewParams.weight = 1;
+                resId = lookupResource(piece);
+                if(j == board.getExitX() && i == board.getExitY()){
+                    imageView.setImageResource(getMetaResource());
+                }
+                imageView.setBackgroundResource(resId);
                 imageView.setLayoutParams(imageViewParams);
-
                 row.addView(imageView);
-
                 imageViews[(j%board.getHorizontalTileCount())+ board.getVerticalTileCount()*i] = imageView;
             }
         }
+   }
+
+   private int getMetaResource() {
+        return R.drawable.flag_mini;
    }
 
     private int lookupResource(BoardPiece piece) {
@@ -127,6 +135,9 @@ public class MazeBoardActivity extends AppCompatActivity
         }
         else if (v == buttonRight) {
             Game.getInstance().getPlayer().setNewDirection(MazeBoard.Direction.EAST);
+        } else if (v == buttonPause) {
+            String texto = Game.getInstance().pauseOrStart();
+            buttonPause.setText(texto);
         }
 
     }

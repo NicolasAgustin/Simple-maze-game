@@ -46,7 +46,7 @@ public class GameSelectionActivity extends AppCompatActivity implements GameMeta
             data.setId(dataId);
             data.setTitle(gameNameInput.getText().toString());
             data.setGameBoard(MazeBoard.from("asdasd"));
-            data.setStatus("NEW");
+            data.setStatus(GameMetadata.GameStatus.NEW.name());
             data.setAuthor(Game.getInstance(this.getApplicationContext()).ID);
 
             databaseReference.child(dataId).setValue(data);

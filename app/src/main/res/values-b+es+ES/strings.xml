@@ -6,4 +6,12 @@
     <string name="game_name">Nombre</string>
     <string name="select_game">Por favor selecciona un juego!</string>
     <string name="or_create_game">O crea uno nuevo</string>
+    <string name="left">IZQ</string>
+    <string name="right">DER</string>
+    <string name="up">ARRIBA</string>
+    <string name="down">ABAJO</string>
+    <string name="pause">PAUSA</string>
+    <string name="resume">RESUMIR</string>
+    <string name="finished">Felicitaciones!!!\nEres increibile</string>
+    <string name="playagain">Volver a jugar</string>
 </resources>

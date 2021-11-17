@@ -5,4 +5,12 @@
     <string name="game_name">Name</string>
     <string name="select_game">Please select game!</string>
     <string name="or_create_game">OR create a new game</string>
+    <string name="left">LEFT</string>
+    <string name="right">RIGHT</string>
+    <string name="up">UP</string>
+    <string name="down">DOWN</string>
+    <string name="pause">PAUSE</string>
+    <string name="resume">RESUME</string>
+    <string name="finished">Congratulations!!!\nYou\'re awesome</string>
+    <string name="playagain">Play again</string>
 </resources>
