@@ -84,6 +84,7 @@ public class Game {
     private void initStatusDatabase() {
         String path = String.format("/%s/status",gameMetadata.getId());
         statusDatabase = FirebaseDatabase.getInstance().getReference(path);
+        statusDatabase.setValue("RUNNING");
     }
 
     ValueEventListener playerDataListener = new ValueEventListener() {
