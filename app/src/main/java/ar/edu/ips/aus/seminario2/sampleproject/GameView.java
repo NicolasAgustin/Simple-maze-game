@@ -23,6 +23,10 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         init();
     }
 
+    public void reset(){
+        thread.reset();
+    }
+
     public GameView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
@@ -76,7 +80,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
     @Override
     public void draw(Canvas canvas){
         super.draw(canvas);
-        if (!thread.getFinish()){
+        if (!thread.getFinish() && !thread.getLose()){
             if (canvas != null){
                 MazeBoard board = Game.getInstance().getMazeBoard();
                 canvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
@@ -92,7 +96,13 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         } else {
             thread.setRunning(false);
 //            Context context = Game.getInstance().getContext();
-            Intent intent = new Intent(this.context, FinishActivity.class);
+            Intent intent;
+
+            if (thread.getLose()) {
+                intent = new Intent(this.context, LoseActivity.class);
+            } else {
+                intent = new Intent(this.context, FinishActivity.class);
+            }
             this.context.startActivity(intent);
         }
 

@@ -69,7 +69,7 @@ public class GameMetadataAdapter extends RecyclerView.Adapter<GameMetadataAdapte
             }
         };
 
-        mDatabaseReference.orderByChild("status").equalTo("NEW").addChildEventListener(mChildEventListener);
+        mDatabaseReference.orderByChild("status").equalTo("RUNNING").addChildEventListener(mChildEventListener);
     }
 
     @NonNull

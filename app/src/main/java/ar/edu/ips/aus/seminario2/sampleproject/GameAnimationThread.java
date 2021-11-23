@@ -18,7 +18,7 @@ public class GameAnimationThread extends Thread {
     private SurfaceHolder surfaceHolder;
     private GameView gameView;
     private boolean running = false;
-    private boolean finish = false;
+    private boolean finish = false, lose = false;
     public static Canvas canvas;
     private DatabaseReference statusDBReference;
     private ValueEventListener statusValueListener;
@@ -45,6 +45,10 @@ public class GameAnimationThread extends Thread {
                 try {
                     GameMetadata.GameStatus status = snapshot.getValue(GameMetadata.GameStatus.class);
                     Game.getInstance().setStatus(status.toString());
+                    if (status.toString().equals("FINISHED") && !finish){
+                        Log.i("PERDISTE","Perdiste el juego");
+                        lose = true;
+                    }
                 } catch (Exception e) {
                     // intentionally left blank
                 }
@@ -94,11 +98,15 @@ public class GameAnimationThread extends Thread {
         // remove status listeners
         statusDBReference.removeEventListener(statusValueListener);
         Log.d("GAT", "Exit GAT!");
-
-
-
     }
+
+    public void reset(){
+        this.lose = false;
+        this.finish = false;
+    }
+
     public boolean getFinish(){return this.finish;}
+    public boolean getLose(){return this.lose;}
     public void setRunning(boolean isRunning) {
         this.running = isRunning;
     }

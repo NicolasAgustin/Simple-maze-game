@@ -9,7 +9,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Nico/aus/seminario2/simple-android-maze-2021_tp0/app/src/main/res/layout/activity_game_selection.xml" value="0.371875" />
-        <entry key="..\:/Users/Nico/aus/seminario2/simple-android-maze-2021_tp0/app/src/main/res/layout/finish_activity.xml" value="0.28177083333333336" />
+        <entry key="..\:/Users/Nico/aus/seminario2/simple-android-maze-2021_tp0/app/src/main/res/layout/finish_activity.xml" value="0.1" />
+        <entry key="..\:/Users/Nico/aus/seminario2/simple-android-maze-2021_tp0/app/src/main/res/layout/lose_activity.xml" value="0.30833333333333335" />
         <entry key="..\:/Users/Nico/aus/seminario2/simple-android-maze-2021_tp0/app/src/main/res/layout/maze.xml" value="0.33" />
         <entry key="..\:/Users/Nico/aus/seminario2/simple-android-maze-2021_tp0/app/src/main/res/layout/splash_activity.xml" value="0.371875" />
         <entry key="..\:/temp/simple-android-maze/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.19814814814814816" />
